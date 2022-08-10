@@ -13,18 +13,29 @@ html {
 }
 
 body{
+
     font-family: 'Roboto', sans-serif;
+     margin-bottom: 240px;
     background-color: #fff;
-    margin-bottom: 240px;
+    background: rgb(170,170,170);
+    background: linear-gradient(180deg, rgba(170,170,170,1) 1%, rgba(255,255,255,1) 18%, rgba(255,255,255,1) 100%);
 }
+
+main{
+    padding-top: 60px;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 
 .nav{
 position: fixed;
+margin-top: 0;
 width: 100%;
 background-color: rgb(41, 41, 41);
 height: 60px;
 color: white;
-
 }
 
 .nav-container{
@@ -37,7 +48,7 @@ align-items: center;
 }
 
 .nav-logo{
-    font-size: 1.2em;
+    font-size: 1.1em;
     font-family: 'Edu VIC WA NT Beginner', cursive;
     font-weight: 700;
     color: #048598;
@@ -148,7 +159,7 @@ background: rgb(41, 41, 41);
     justify-content: center;
     align-content: center;
     flex-wrap: wrap;
-    padding: 80px;
+    padding: 40px 80px;
     line-height: 1.5;
 }
 
@@ -259,12 +270,257 @@ background: rgb(41, 41, 41);
     
 }
 
+/* aca inician los estilos de la seccion "la escuela" */
+.info-escuela{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-around;
+    align-items: center
+}
+
+.info-escuela h2{
+    margin-bottom: 15px;
+    margin-top: 15px;
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.anuncio {
+    padding: 6px;
+    width: 100%;
+    text-align: center;
+    background-color: #b9b9b9b9;
+}
+
+.padding {
+    padding:40px;
+}
+
+.beneficios span{
+    padding: 0px 15px;
+    border-right: 3px solid #b9b9b9b9;
+    border-left:3px solid #b9b9b9b9;
+}
+
+.videos-muestra{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.videos-muestra div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.videos-muestra div h3{
+    color: #048598;
+    font-size: 1.75rem;
+    font-weight: 300;
+    padding-bottom: 10px;
+}
+/* aca terminan los estilos de la seccion "la escuela" */
+/* aca inician los estilos de la seccion "contenidos" */
+.working{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.working h2{
+    margin-bottom: 15px;
+    margin-top: 15px;
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.loader {
+  margin-top: 90px;
+  width: 48px;
+  height: 48px;
+  border: 3px solid #2A2A2A;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+.loader::after {
+  content: '';  
+  box-sizing: border-box;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 3px solid;
+  border-color: #048598 transparent;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
+/* aca terminan los estilos de la seccion "contenidos" */
+/* aca inician los estilos de la seccion "profesor" */
+.biografia{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.biografia h2{
+    padding: 20px;
+    font-weight: 300;
+    font-size: 28px;
+}
+
+.biografia img{
+    max-height: 460px;
+    border-bottom: solid 6px #048598 ;
+}
+
+.biografia h3{
+    padding: 4px;
+    font-weight: 300;
+    font-size: 24px;
+}
+
+.biografia p{
+    font-weight: 200;
+}
+/* aca terminan los estilos de la seccion "profesor" */
+/* aca inician los estilos de la seccion "certificado" */
+.certificado{
+    display: flex;
+    justify-content: space-around;
+}
+
+.text-certificado{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 500px;
+}
+
+.text-certificado h2{
+    font-size: 2.5rem;
+    font-weight: 300;
+    padding-top: 20px;
+}
+
+.text-certificado p{
+    font-size: 16px;
+}
+
+.text-certificado h3{
+    font-size: 16px;
+}
+
+.btn-subs{
+    padding: 15px 3px;
+}
+
+.text-certificado a{
+    background-color: #048598;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: white;
+}
+
+.img-certificado img{
+    padding-top: 20px;
+    max-width: 300px;
+}
+/* aca terminan los estilos de la seccion "certificado" */
+/* aca inician los estilos de la seccion "registro" */
+
+.text-matriculate h2{
+    font-size: 1.8rem;
+    font-weight: 300;
+    text-align: center;
+}
+
+.text-matriculate h3{
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+
+.text-matriculate p{
+    font-size: 16px;
+    font-weight: 100;
+}
+
+.tarjetas{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.tarjeta{
+    margin-top: 20px;
+    height: 320px;
+    width: 315px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    background-color: #fff;
+    border: 2px solid rgba(0,0,0,.125);
+    border-radius: 0.25rem;
+}
+
+.tarjeta h2{
+    font-size: 36px;
+    color: #048598;
+    margin: 28px;
+}
+
+.tarjeta span{
+    font-size: 14px;
+}
+
+.tarjeta h3{
+    font-size: 38px;
+    color: crimson;
+    margin: 20px;
+}
+
+.tarjeta a {
+    background-color: #048598;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: white;
+}
+/* aca terminan los estilos de la seccion "registro" */
+
 footer{
     position: absolute;
     bottom: 0;
     left: 0;
-    height: fit-content;
     width: 100%;
+    height: fit-content;
     display: flex;
     justify-content: center;
     align-items: center;
