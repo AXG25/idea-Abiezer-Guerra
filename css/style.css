@@ -23,42 +23,72 @@ body{
 
 main{
     padding-top: 60px;
-    width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100vw;
+    padding-left: auto;
+    padding-right: auto;
 }
 
+.grid-container {  
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows:  auto auto auto;
+    grid-template-areas:
+      "header header header"
+      "main main main"
+      "footer footer footer";
+  }
+  
+  .header { 
+    grid-area: header; 
+
+}
+  
+  .main { 
+    grid-area: main; 
+    
+}
+  
+  .footer { 
+    grid-area: footer; 
+    
+}
+  
 
 .nav{
 position: fixed;
 margin-top: 0;
-width: 100%;
+width: 100vw;
 background-color: rgb(41, 41, 41);
 height: 60px;
 color: white;
 }
 
 .nav-container{
+padding: 0 15px;
 display: flex;
 height: 100%;
-width: 90%;
+width: 100vw;
 margin: 0 auto;
 justify-content:space-between;
 align-items: center;
+
 }
 
 .nav-logo{
-    font-size: 1.1em;
+    font-size: 1em;
     font-family: 'Edu VIC WA NT Beginner', cursive;
     font-weight: 700;
     color: #048598;
     text-decoration: none;
+    
 }
 
 .nav-menu{
-    display: grid;
-    grid-auto-flow: column;
-    gap: 2em;
+    
+     display: flex;
+    justify-items: center;
+    width: 40%;
+    justify-content: space-around; 
 }
 
 .nav-item{
@@ -71,11 +101,12 @@ color:white;
     content: "";
     display: block;
     background-color: white;
-    width: 90%;
+    width: 100%;
     margin-top: 1px;
     height: 2px;
     clip-path: var(--clippy);
     transition: clip-path .3s;
+    z-index: 2;
 }
 
 .nav-item:hover{
@@ -119,8 +150,6 @@ background: rgb(41, 41, 41);
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    margin-left: 80px;
-    margin-right: 80px;
 }
 
 .main1{
@@ -140,7 +169,7 @@ background: rgb(41, 41, 41);
 }
 
 .text-banner p{
-    font-size: small;
+    font-size: 16px;
     font-weight: 200;
 }
 
@@ -159,7 +188,8 @@ background: rgb(41, 41, 41);
     justify-content: center;
     align-content: center;
     flex-wrap: wrap;
-    padding: 40px 80px;
+    padding: 30px 30px;
+    text-align: center;
     line-height: 1.5;
 }
 
@@ -170,7 +200,7 @@ background: rgb(41, 41, 41);
 .slider{
     width: 100%;
     margin: auto;
-    height: 600px;
+    height: auto;
     overflow: hidden;
     margin-bottom: 40px;
 }
@@ -179,7 +209,7 @@ background: rgb(41, 41, 41);
     padding: 0;
     display: flex;
     width: 400%;
-    animation: slider 20s infinite alternate;
+    animation: slider 20s infinite ;
 }
 
 .slider li{
@@ -215,8 +245,8 @@ background: rgb(41, 41, 41);
 }
 
 .slider-text h2{
-    font-size: 30px;
-    padding-right: 20px;
+    font-size: 20px;
+    padding:0 20px;
     color: white;
 }
 
@@ -237,18 +267,18 @@ background: rgb(41, 41, 41);
 }
 
 .exp li{
-    position: absolute;
+    position: relative;
     height: 100px;
     top: 200%;
     line-height: 105px;
 }
 
 .exp li:first-child{
-    top: 100%;
+    top:100%;
 }
 
 .exp li:last-child{
-    top: 300%;
+    top: -1%;
 }
 
 @keyframes slide-text{
@@ -267,7 +297,6 @@ background: rgb(41, 41, 41);
     100%{
         transform: translateY(-400%);
     }
-    
 }
 
 /* aca inician los estilos de la seccion "la escuela" */
@@ -276,7 +305,8 @@ background: rgb(41, 41, 41);
     flex-direction: column;
     flex-wrap: wrap;
     align-content: space-around;
-    align-items: center
+    align-items: center;
+    text-align: center;
 }
 
 .info-escuela h2{
@@ -306,16 +336,20 @@ background: rgb(41, 41, 41);
 
 .videos-muestra{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-content: center;
     align-items: center;
     flex-wrap: wrap;
+    width: 100vw;
 }
 
 .videos-muestra div{
     display: flex;
     flex-direction: column;
     align-items: center;
+    /* width: 40%;
+    height:auto; */
+    padding:20px 0;
 }
 
 .videos-muestra div h3{
@@ -330,6 +364,7 @@ background: rgb(41, 41, 41);
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align:center;
 }
 
 .working h2{
@@ -407,6 +442,8 @@ background: rgb(41, 41, 41);
 .certificado{
     display: flex;
     justify-content: space-around;
+    width: 100%;
+    flex-wrap:wrap;
 }
 
 .text-certificado{
@@ -415,6 +452,7 @@ background: rgb(41, 41, 41);
     align-items: flex-start;
     justify-content: center;
     width: 500px;
+    padding: 0 20px;
 }
 
 .text-certificado h2{
@@ -451,16 +489,22 @@ background: rgb(41, 41, 41);
 }
 /* aca terminan los estilos de la seccion "certificado" */
 /* aca inician los estilos de la seccion "registro" */
+.text-matriculate{
+padding:0 20px;
+text-align: center;
+}
 
 .text-matriculate h2{
     font-size: 1.8rem;
     font-weight: 300;
-    text-align: center;
+    
+    padding-bottom:20px;
 }
 
 .text-matriculate h3{
     font-size: 1.5rem;
     font-weight: 200;
+    padding-bottom: 5px;
 }
 
 .text-matriculate p{
@@ -470,7 +514,7 @@ background: rgb(41, 41, 41);
 
 .tarjetas{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: wrap;
 }
 
@@ -519,8 +563,8 @@ footer{
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 100%;
-    height: fit-content;
+    width: 100vw;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -531,7 +575,7 @@ footer{
 }
 
 .copyright-container{
-    width: 100%;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -546,8 +590,8 @@ footer{
 }
 
 .footer-container{
-    height: fit-content;
-    width: 100%;
+    height: auto;
+    width: 100vw;
     padding: 3rem 6rem;
     box-sizing: border-box;
     display: flex;
@@ -610,7 +654,7 @@ footer .social-link:nth-of-type(3){/*Nth of type inside that container*/
         position: fixed;
         top: 60px;
         bottom: 0;
-        width: 100%;
+        width: 100vw;
         left: 0;
         display: flex;
         justify-content: space-evenly;
@@ -624,24 +668,14 @@ footer .social-link:nth-of-type(3){/*Nth of type inside that container*/
         clip-path: circle(100% at center);
     }
 
-    .footer-container{
-        padding: 2rem;
-        flex-direction: column;
-    }
-
-    .footer-content-container{
-        width: 100%;
-        padding: 2rem 0;
-        border-bottom: 1px solid #2A2A2A;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .footer-content-container:nth-of-type(1){
-        align-items: flex-start;
-    }
-    .footer-content-container:nth-of-type(3){
-        border-bottom: none;
-        padding-bottom: 0;
-    }
 }
+
+@media (max-width: 750px){
+    .beneficios div {
+        display: flex;
+        flex-direction: column;
+        padding: 40px 80px;
+    }
+
+}
+
