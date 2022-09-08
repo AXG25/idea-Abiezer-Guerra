@@ -1,0 +1,155 @@
+main {
+    padding-top: 40px;
+    width: 100vw;
+    padding-left: auto;
+    padding-right: auto;
+
+    .contenedor {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+
+        .banner {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+
+            .img-banner {
+                height: 360px;
+            }
+
+            .text-banner {
+                text-align: start;
+                margin-top: 1rem;
+                margin-left: 80px;
+                margin-right: 80px;
+                line-height: 1.5;
+
+                .nav-logo {
+                    font-size: 1em;
+                    font-family: "Edu VIC WA NT Beginner", cursive;
+                    font-weight: 700;
+                    color: $principal;
+                    text-decoration: none;
+                }
+
+                h3 {
+                    font-weight: 300;
+                }
+
+                p {
+                    font-size: 16px;
+                    font-weight: 200;
+                }
+
+                .btn {
+                    background-color: $principal;
+                    border: none;
+                    border-radius: 6px;
+                    font-size: 12px;
+                    padding-left: 12px;
+                    padding-right: 12px;
+                    padding-top: 4px;
+                    padding-bottom: 4px;
+                    text-decoration: none;
+                    color: white;
+                }
+            }
+        }
+    }
+    .beneficios {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            align-content: center;
+            flex-wrap: wrap;
+            padding: 30px 30px;
+            text-align: center;
+            line-height: 1.5;
+
+            h2 {
+                font-weight: 300;
+            }
+        }
+    }
+    .slider {
+        width: 100%;
+        margin: auto;
+        height: auto;
+        overflow: hidden;
+        margin-bottom: 40px;
+
+        ul {
+            padding: 0;
+            display: flex;
+            width: 400%;
+            animation: slider 20s infinite;
+
+            li {
+                width: 100%;
+                list-style: none;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .slider-text {
+        background-color: $principal;
+        height: 200px;
+        width: 100%;
+        font-family: Roboto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 40px;
+
+        h2 {
+            font-size: 20px;
+            padding: 0 20px;
+            color: white;
+        }
+        .exp {
+            overflow: hidden;
+
+            ul,
+            li {
+                list-style: none;
+                color: white;
+            }
+            ul {
+                width: 380px;
+                height: 100px;
+                position: relative;
+                animation: slide-text 10s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
+            }
+            li {
+                //position: relative;
+                height: 100px;
+                top: 200%;
+                line-height: 105px;
+
+                &:first-child {
+                    top: 100%;
+                }
+
+                &:last-child {
+                    top: -1%;
+                }
+            }
+        }
+    }
+}

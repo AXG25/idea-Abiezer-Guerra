@@ -1,0 +1,81 @@
+.nav {
+    position: fixed;
+    margin-top: 0;
+    width: 100vw;
+    background-color: $secundario;
+    height: 60px;
+    color: white;
+
+    .nav-container {
+        padding: 0 15px;
+        display: flex;
+        height: 100%;
+        width: 100vw;
+        margin: 0 auto;
+        justify-content: space-between;
+        align-items: center;
+
+        .nav-logo {
+            font-size: 1em;
+            font-family: "Edu VIC WA NT Beginner", cursive;
+            font-weight: 700;
+            color: $principal;
+            text-decoration: none;
+
+            .slide-top {
+                animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+            }
+        }
+
+        .nav-label,
+        .nav-input {
+            display: none;
+        }
+
+        .nav-input:checked + .nav-menu {
+            background: rgb(41, 41, 41);
+            z-index: 1;
+        }
+
+        .nav-menu {
+            display: flex;
+            justify-items: center;
+            width: 40%;
+            justify-content: space-around;
+
+            .nav-item {
+                text-decoration: none;
+                color: white;
+                --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
+
+                &::after {
+                    content: "";
+                    display: block;
+                    background-color: white;
+                    width: 100%;
+                    margin-top: 1px;
+                    height: 2px;
+                    clip-path: var(--clippy);
+                    transition: clip-path 0.3s;
+                }
+
+                &:hover {
+                    --clippy: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+                }
+            }
+
+            .btn {
+                background-color: $principal;
+                border: none;
+                border-radius: 6px;
+                font-size: 12px;
+                padding-left: 12px;
+                padding-right: 12px;
+                padding-top: 4px;
+                padding-bottom: 4px;
+                text-decoration: none;
+                color: white;
+            }
+        }
+    }
+}

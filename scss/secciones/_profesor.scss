@@ -1,0 +1,24 @@
+.biografia {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+        padding-top: 20px;
+        font-weight: 300;
+        font-size: 28px;
+    }
+    img {
+        max-height: 450px;
+        border-bottom: solid 6px $principal;
+    }
+    h3 {
+        padding: 4px;
+        font-weight: 300;
+        font-size: 24px;
+    }
+    p {
+        font-weight: 200;
+    }
+}

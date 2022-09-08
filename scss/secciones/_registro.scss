@@ -1,0 +1,62 @@
+.text-matriculate {
+    padding: 0 20px;
+    text-align: center;
+
+    h2 {
+        font-size: 1.8rem;
+        font-weight: 300;
+
+        padding-bottom: 20px;
+    }
+    h3 {
+        font-size: 1.5rem;
+        font-weight: 200;
+        padding-bottom: 5px;
+    }
+    p {
+        font-size: 16px;
+        font-weight: 100;
+    }
+}
+.tarjetas {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    .tarjeta {
+        margin-top: 20px;
+        height: 320px;
+        width: 315px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-width: 0;
+        background-color: #fff;
+        border: 2px solid rgba(0, 0, 0, 0.125);
+        border-radius: 0.25rem;
+
+        h2 {
+            font-size: 36px;
+            color: $principal;
+            margin: 28px;
+        }
+        span {
+            font-size: 14px;
+        }
+        h3 {
+            font-size: 38px;
+            color: $price;
+            margin: 20px;
+        }
+        a {
+            background-color: $principal;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            padding: 8px 16px;
+            text-decoration: none;
+            color: white;
+        }
+    }
+}

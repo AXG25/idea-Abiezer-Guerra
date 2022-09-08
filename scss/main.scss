@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    min-height: 100%;
+    position: relative;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 240px;
+    background-color: #fff;
+    background: rgb(170, 170, 170);
+    background: linear-gradient(
+        180deg,
+        rgba(170, 170, 170, 1) 1%,
+        rgba(255, 255, 255, 1) 18%,
+        rgba(255, 255, 255, 1) 100%
+    );
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+            "header header header"
+            "main main main"
+            "footer footer footer";
+    }
+
+    .header {
+        grid-area: header;
+    }
+
+    .main {
+        grid-area: main;
+    }
+
+    .footer {
+        grid-area: footer;
+    }
+}
+
+@import "./variables/_colores.scss";
+
+@import "./secciones/_header.scss";
+@import "./secciones/_main.scss";
+@import './secciones/_footer.scss';
+@import "./secciones/_escuela.scss";
+@import "./secciones/_contenidos.scss";
+@import "./secciones/_profesor.scss";
+@import "./secciones/_certificados.scss";
+@import "./secciones/_registro.scss";
+
+@import "./secciones/_keyframes.scss";
+@import './secciones/mediaq';
