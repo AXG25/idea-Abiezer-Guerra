@@ -17,14 +17,12 @@
 
         .nav-logo {
             font-size: 1em;
-            font-family: "Edu VIC WA NT Beginner", cursive;
-            font-weight: 700;
-            color: $principal;
-            text-decoration: none;
-
-            .slide-top {
-                animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-            }
+                    font-family: $fontLogo;
+                    font-weight: 700;
+                    background: $principal;
+                    -webkit-text-fill-color: transparent;
+                    -webkit-background-clip: text;
+                    text-decoration: none;
         }
 
         .nav-label,
