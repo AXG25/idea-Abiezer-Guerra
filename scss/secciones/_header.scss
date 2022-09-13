@@ -5,6 +5,7 @@
     background-color: $secundario;
     height: 60px;
     color: white;
+    z-index: 100 !important;
 
     .nav-container {
         padding: 0 15px;
@@ -17,12 +18,10 @@
 
         .nav-logo {
             font-size: 1em;
-                    font-family: $fontLogo;
-                    font-weight: 700;
-                    background: $principal;
-                    -webkit-text-fill-color: transparent;
-                    -webkit-background-clip: text;
-                    text-decoration: none;
+            font-family: $fontLogo;
+            font-weight: 700;
+            color:$principal;
+            text-decoration: none;
         }
 
         .nav-label,

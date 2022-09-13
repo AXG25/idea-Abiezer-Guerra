@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 
-html{
+html {
     min-height: 100%;
     position: relative;
 }
@@ -47,6 +47,7 @@ body {
 }
 
 @import "./variables/_colores.scss";
+@import "./variables/extend.scss";
 
 @import "./secciones/_header.scss";
 @import "./secciones/_main.scss";

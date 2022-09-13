@@ -33,16 +33,9 @@ main {
                     font-size: 1em;
                     font-family: $fontLogo;
                     font-weight: 700;
-                    background: $principal;
-                    background: linear-gradient(
-                        185deg,
-                        rgba(2, 0, 36, 1) 0%,
-                        rgba(9, 9, 121, 1) 10%,
-                        rgba(0, 212, 255, 1) 100%
-                    );
-                    -webkit-text-fill-color: transparent;
-                    -webkit-background-clip: text;
+                    color: $principal;
                     text-decoration: none;
+                    @extend %gradienteLogo;
                 }
             }
 

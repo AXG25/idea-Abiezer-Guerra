@@ -1,5 +1,5 @@
-@mixin cardMod ($colorFondo,$colorText,$padding) {
+@mixin cardMod($colorFondo, $colorText, $padding) {
     background-color: $colorFondo;
     color: $colorText;
-    padding:$padding;
+    padding: $padding;
 }

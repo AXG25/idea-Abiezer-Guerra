@@ -19,10 +19,9 @@
         z-index: 100;
     }
 
-    .nav-input:checked+.nav-menu {
+    .nav-input:checked + .nav-menu {
         clip-path: circle(100% at center);
     }
-
 }
 
 @media (max-width: 750px) {
@@ -31,5 +30,4 @@
         flex-direction: column;
         padding: 40px 80px;
     }
-
 }
