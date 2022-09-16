@@ -39,9 +39,12 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
+        text-align: center;
         /* width: 40%;
         height:auto; */
         padding: 40px;
+        border: none;
 
         h3 {
             color: $principal;

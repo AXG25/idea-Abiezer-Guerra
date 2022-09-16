@@ -17,11 +17,21 @@
         align-items: center;
 
         .nav-logo {
+            display: flex;
+            align-items: center;
             font-size: 1em;
             font-family: $fontLogo;
             font-weight: 700;
             color:$principal;
             text-decoration: none;
+            
+            h1{
+                padding-left: 10px;
+            }
+            img{
+                width:50px;
+                height: auto;
+            }
         }
 
         .nav-label,
